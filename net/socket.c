@@ -1921,6 +1921,7 @@ int __sys_accept4_file(struct file *file, unsigned file_flags,
 int __sys_accept4(int fd, struct sockaddr __user *upeer_sockaddr,
 		  int __user *upeer_addrlen, int flags)
 {
+	printk("AnishCustomAccept\n")
 	int ret = -EBADF;
 	struct fd f;
 
@@ -1984,6 +1985,7 @@ out:
 
 int __sys_connect(int fd, struct sockaddr __user *uservaddr, int addrlen)
 {
+	printk("AnishCustomConnect\n");
 	int ret = -EBADF;
 	struct fd f;
 
